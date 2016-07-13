@@ -1,5 +1,5 @@
 {
-    "name": "expoosuresoftware/slackerlogs",
+    "name": "exposuresoftware/slackerlogs",
     "description": "Provides interface to Slack chat from Laravel/Lumen logging.",
     "type": "library",
     "require": {
