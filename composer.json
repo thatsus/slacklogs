@@ -1,0 +1,23 @@
+{
+    "name": "expoosuresoftware/slackerlogs",
+    "description": "Provides interface to Slack chat from Laravel/Lumen logging.",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2",
+        "illuminate/log": "^5.2",
+        "illuminate/container": "^5.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marshall Davis",
+            "email": "toothlessrebel@gmail.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "ExposureSoftware\\SlackerLogs\\": "classes/"
+      }
+    },
+    "minimum-stability": "dev"
+}
