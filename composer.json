@@ -16,7 +16,7 @@
     ],
     "autoload": {
       "psr-4": {
-        "ThatsUs\\SlackerLogs\\": "classes/"
+        "ThatsUs\\SlackLogs\\": "classes/"
       }
     },
     "minimum-stability": "dev"
