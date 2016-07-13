@@ -1,5 +1,5 @@
 {
-    "name": "thatsus/slackerlogs",
+    "name": "thatsus/slacklogs",
     "description": "Provides interface to Slack chat from Laravel/Lumen logging.",
     "type": "library",
     "require": {
