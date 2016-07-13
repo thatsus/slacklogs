@@ -36,14 +36,15 @@ documentation in the link regarding how to set this up and get your webhook.
 `$level` is an the integer value of the log level you wish to report. This and any higher log levels will be sent to
 Slack. See `Monolog\Logger` for these values and constants available.  
 The available log levels are:
-> DEBUG     = 100
-> INFO      = 200
-> NOTICE    = 250
-> WARNING   = 300
-> ERROR     = 400
-> CRITICAL  = 500
-> ALERT     = 550
-> EMERGENCY = 600
+> DEBUG     = 100  
+> INFO      = 200  
+> NOTICE    = 250  
+> WARNING   = 300  
+> ERROR     = 400  
+> CRITICAL  = 500  
+> ALERT     = 550  
+> EMERGENCY = 600  
+
 ### Register the Provider with the application
 Add the line to your providers array as follows:
 ```
