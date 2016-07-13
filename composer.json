@@ -1,5 +1,5 @@
 {
-    "name": "exposuresoftware/slackerlogs",
+    "name": "thatsus/slackerlogs",
     "description": "Provides interface to Slack chat from Laravel/Lumen logging.",
     "type": "library",
     "require": {
@@ -16,7 +16,7 @@
     ],
     "autoload": {
       "psr-4": {
-        "ExposureSoftware\\SlackerLogs\\": "classes/"
+        "ThatsUs\\SlackerLogs\\": "classes/"
       }
     },
     "minimum-stability": "dev"

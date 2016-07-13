@@ -5,12 +5,12 @@ Provides interface to Slack chat from Laravel/Lumen logging.
 ### Via Composer
 To install via Composer first make sure Composer is installed.  
 Then need to simply run the command to require the package.  
-`composer require exposuresoftware/slackerlogs`
+`composer require thatsus/slackerlogs`
 ## Register with the Container
 In order to make using this package you are only required to write a very simple class and register it
 with your application.
 ### Create a Provider
-You `Provider` class can be named whatever you wish but **must** extend the `ExposureSoftware\SlackLogs\Providers\LoggerProvider`
+You `Provider` class can be named whatever you wish but **must** extend the `ThatsUs\SlackLogs\Providers\LoggerProvider`
 class.  
 This can be as simple as
 ```
@@ -18,7 +18,7 @@ This can be as simple as
 
 namespace App\Providers;
 
-use ExposureSoftware\SlackLogs\Providers\LoggerProvider;
+use ThatsUs\SlackLogs\Providers\LoggerProvider;
 
 class SlackLogProvider extends LoggerProvider {
     protected $channel = ...;

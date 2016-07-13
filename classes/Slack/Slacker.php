@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ExposureSoftware\SlackLogs\Slack;
+namespace ThatsUs\SlackLogs\Slack;
 use GuzzleHttp\Client;
 
 /**

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace ExposureSoftware\SlackLogs\Providers;
+namespace ThatsUs\SlackLogs\Providers;
 
 
-use ExposureSoftware\SlackLogs\Listeners\LogHandler;
+use ThatsUs\SlackLogs\Listeners\LogHandler;
 use Illuminate\Container\Container;
 use Illuminate\Log\Writer;
 use Illuminate\Support\ServiceProvider;

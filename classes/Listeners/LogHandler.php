@@ -1,11 +1,11 @@
 <?php
 
 
-namespace ExposureSoftware\SlackLogs\Listeners;
+namespace ThatsUs\SlackLogs\Listeners;
 
 
-use ExposureSoftware\SlackLogs\Slack\Attachment;
-use ExposureSoftware\SlackLogs\Slack\Slacker;
+use ThatsUs\SlackLogs\Slack\Attachment;
+use ThatsUs\SlackLogs\Slack\Slacker;
 use Illuminate\Container\Container;
 use Monolog\Handler\AbstractHandler;
 use Monolog\Logger;
@@ -13,7 +13,7 @@ use Monolog\Logger;
 /**
  * Class LogHandler
  *
- * @package ExposureSoftware\SlackLogs\Listeners
+ * @package ThatsUs\SlackLogs\Listeners
  */
 class LogHandler extends AbstractHandler
 {
