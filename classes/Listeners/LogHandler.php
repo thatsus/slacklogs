@@ -52,7 +52,7 @@ class LogHandler extends AbstractHandler
      */
     public function handle(array $record)
     {
-        if ($record['level'] > $this->level) {
+        if ($record['level'] >= $this->level) {
             /** @var Slacker $slack */
             $slack = Container::getInstance()->make('\App\Libs\Slack\Slacker', [$this->hook, $this->channel, $this->user]);
             /** @var Attachment $attachment */
