@@ -19,6 +19,15 @@ use Monolog\Logger;
  */
 class LoggerProvider extends ServiceProvider
 {
+    /** @var string $channel */
+    protected $channel;
+    /** @var string $user */
+    protected $user;
+    /** @var string $hook */
+    protected $hook;
+    /** @var int $level */
+    protected $level;
+
     /**
      * Push the eloquent handler to monolog on boot.
      */
@@ -32,8 +41,8 @@ class LoggerProvider extends ServiceProvider
 
             // Make sure the Monolog Logger is returned
             if($monolog instanceof Logger) {
-                // Create your custom handler
-                $handler = new LogHandler();
+                // Create custom handler
+                $handler = new LogHandler($this->hook, $this->channel, $this->user, $this->level);
 
                 // Push it to monolog
                 $monolog->pushHandler($handler);

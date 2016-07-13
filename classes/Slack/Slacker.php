@@ -13,19 +13,26 @@ use GuzzleHttp\Client;
  */
 class Slacker
 {
-    private $webhook = 'https://hooks.slack.com/services/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';
-    private $channel = '#development';
-    private $user = 'LV2';
+    /** @var string $hook */
+    private $hook;
+    /** @var string $channel */
+    private $channel;
+    /** @var string $user */
+    private $user;
+    /** @var string $message */
     private $message = '';
-    private $emoji = ':robot_face:';
+    /** @var string $emoji */
+    private $emoji;
+    /** @var array $attachments */
     private $attachments = [];
+    /** @var string $icon */
     private $icon = '';
 
-    public function __construct($channel = null, $user = null, $emoji = null)
+    public function __construct($hook, $channel, $user)
     {
-        $this->channel = $channel ?: $this->channel;
-        $this->user = $user ?: $this->user;
-        $this->emoji = $emoji ?: $this->emoji;
+        $this->channel = $channel;
+        $this->user = $user;
+        $this->hook = $hook;
     }
 
     /**
@@ -156,7 +163,7 @@ class Slacker
 
         /** @var Client $client */
         $client = new Client();
-        $output = $client->request('POST', $this->webhook, [
+        $output = $client->request('POST', $this->hook, [
             'json' => $payload,
         ]);
 
