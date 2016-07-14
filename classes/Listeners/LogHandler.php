@@ -54,9 +54,9 @@ class LogHandler extends AbstractHandler
     {
         if ($record['level'] >= $this->level) {
             /** @var Slacker $slack */
-            $slack = Container::getInstance()->make('\App\Libs\Slack\Slacker', [$this->hook, $this->channel, $this->user]);
+            $slack = Container::getInstance()->make('\ThatsUs\SlackLogs\Slack\Slacker', [$this->hook, $this->channel, $this->user]);
             /** @var Attachment $attachment */
-            $attachment = Container::getInstance()->make('\App\Libs\Slack\Attachment', ["New Log Entry", $record['message']]);
+            $attachment = Container::getInstance()->make('\ThatsUs\SlackLogs\Slack\Attachment', ["New Log Entry", $record['message']]);
 
             $attachment->setColor($this->colorForLevel($record['level']));
             $attachment->addField('Log Level', $record['level_name'], $record['level']);
@@ -84,7 +84,7 @@ class LogHandler extends AbstractHandler
             case Logger::WARNING:
                 $color = '#ffa500';
                 break;
-            case 'ERROR':
+            case Logger::ERROR:
                 $color = '#880000';
                 break;
             default:
