@@ -27,12 +27,21 @@ class LoggerProvider extends ServiceProvider
     protected $hook;
     /** @var int $level */
     protected $level;
+    /** @var array $blacklisted_environments */
+    protected $blacklisted_environments = [
+        'testing',
+    ];
 
     /**
      * Push the eloquent handler to monolog on boot.
      */
     public function boot()
     {
+        // Short circuit
+        if (in_array(strtolower(getenv('APP_ENV')), $this->blacklisted_environments)) {
+            return;
+        }
+
         $logger = Container::getInstance()->make('log', []);
 
         // Make sure the logger is a Writer instance
