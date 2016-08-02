@@ -27,9 +27,9 @@ class LoggerProvider extends ServiceProvider
     protected $hook;
     /** @var int $level */
     protected $level;
-    /** @var array $blacklisted_environments */
-    protected $blacklisted_environments = [
-        'testing',
+    /** @var array $whitelisted_environments */
+    protected $whitelisted_environments = [
+        'production',
     ];
 
     /**
@@ -38,7 +38,7 @@ class LoggerProvider extends ServiceProvider
     public function boot()
     {
         // Short circuit
-        if (in_array(strtolower(getenv('APP_ENV')), $this->blacklisted_environments)) {
+        if (!in_array(strtolower(getenv('APP_ENV')), $this->whitelisted_environments)) {
             return;
         }
 
